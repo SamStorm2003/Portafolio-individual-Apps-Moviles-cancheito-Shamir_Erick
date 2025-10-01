@@ -10,7 +10,6 @@ De forma complementaria, también realicé pruebas exhaustivas en las funcionali
 ## Contribuciones Técnicas  
 
 ### Tecnologías utilizadas  
-## 🔧 Tecnologías utilizadas
 
 ### Frontend Móvil
 - **Kotlin + Android Studio**  
@@ -34,9 +33,19 @@ De forma complementaria, también realicé pruebas exhaustivas en las funcionali
 - **Android Studio, Git/GitHub, Jira, Miro.**
 
 ### Contribuciones clave del código  
-- Implementación de la **US-013 / US-012 (Calificar empleador/postulante)** → [https://github.com/Jhoel777ar/cancheito_app_preview/commit/0843eb9d65cc62a380d146ce5d393398ae04254c].  
-- Desarrollo de la **US-004 (Registro de usuarios y validaciones)** → [https://github.com/Jhoel777ar/cancheito_app_preview/commit/fc112f8a4142a192668605cb29dc5ff90f22f4fb].  
-- Ajustes en integración con Firebase Auth y Firestore para manejo de perfiles → [https://github.com/Jhoel777ar/cancheito_app_preview/commit/b6a56136515280cc3e9197cc3521634735a76250].  
+
+- **Implementación de la US-013 / US-012 (Calificar empleador y postulante):**  
+  Desarrollo completo del flujo de calificación, incluyendo botones, navegación, persistencia de puntajes y sincronización en Firebase.  
+  🔗 [Ver commit](https://github.com/Jhoel777ar/cancheito_app_preview/commit/0843eb9d65cc62a380d146ce5d393398ae04254c)  
+
+- **Desarrollo de la US-004 (Registro de usuarios y validaciones):**  
+  Implementación del registro de cuentas con correo/contraseña, validaciones de campos obligatorios y manejo de errores comunes en la creación de usuarios.  
+  🔗 [Ver commit](https://github.com/Jhoel777ar/cancheito_app_preview/commit/fc112f8a4142a192668605cb29dc5ff90f22f4fb)  
+
+- **Optimización en la integración con Firebase (Auth y Firestore):**  
+  Ajustes en la lógica de autenticación, gestión de perfiles y almacenamiento de datos en la nube, garantizando mayor estabilidad y consistencia entre frontend y backend.  
+  🔗 [Ver commit](https://github.com/Jhoel777ar/cancheito_app_preview/commit/b6a56136515280cc3e9197cc3521634735a76250)  
+
 
 ### Desafíos técnicos resueltos  
 
@@ -71,7 +80,7 @@ De forma complementaria, también realicé pruebas exhaustivas en las funcionali
 - **Roles ejercidos:** Scrum Master, Desarrollador, Tester.  
 - **Participación en ceremonias:** Facilitación de *Daily Scrums*, *Sprint Planning*, *Reviews* y *Retrospectives*.  
 - **Métricas personales de contribución:**  
-  - Participación en ~70 % de sprints activos.  
+  - Participación en mayor al 70 % de sprints activos.  
   - Desarrollo de 3 historias críticas del backlog.  
   - Pruebas funcionales en +10 features de compañeros.  
 
@@ -88,11 +97,21 @@ De forma complementaria, también realicé pruebas exhaustivas en las funcionali
 
 ## Artefactos y Evidencia  
 
-- **Screenshots:** Interfaces de login, perfil y calificaciones implementadas.  
-- **Documentación:** Historias de usuario, backlog priorizado, actas de sprint y definición de done.  
-- **Reconocimientos:** Agradecimientos del equipo por el soporte en pruebas y liderazgo.  
-- **Capturas de app:** Emulador y dispositivos físicos (API 24–34).  
-- **Fragmentos de código:** Configuración Firebase, `login.page.ts`, sincronización offline con Firestore.  
+### App Móvil
+✅ Implementación de la **US-013 / US-012 (Calificar empleador y postulante)** → [Commit](https://github.com/Jhoel777ar/cancheito_app_preview/commit/0843eb9d65cc62a380d146ce5d393398ae04254c)  
+✅ Desarrollo de la **US-004 (Registro de usuarios y validaciones)** → [Commit](https://github.com/Jhoel777ar/cancheito_app_preview/commit/fc112f8a4142a192668605cb29dc5ff90f22f4fb)  
+✅ Ajustes en **Firebase Auth y Firestore** para la gestión de perfiles → [Commit](https://github.com/Jhoel777ar/cancheito_app_preview/commit/b6a56136515280cc3e9197cc3521634735a76250)  
+✅ Capturas de la aplicación funcionando en **emulador y dispositivos físicos** (validación propia como tester)  
+
+### Documentación y Testing
+✅ Evidencia de pruebas de las funcionalidades implementadas por mis compañeros (rol de **tester**)  
+✅ Documentación de avances en **User Stories** y definición de criterios de aceptación  
+✅ Registro de mi participación como **Scrum Master** en ceremonias (Daily, Planning, Retrospectiva)  
+
+### Código y Evidencia Técnica
+✅ Fragmentos clave en `MisPostulacionesFragment.kt` y `DetallePostulanteFragment.kt` (flujo de calificaciones y postulaciones)  
+✅ Configuración de **Firebase Authentication y Realtime Database** aplicada en mis historias  
+✅ **APK firmado** probado y verificado con mis desarrollos en dispositivos físicos   
 
 ---
 
@@ -127,7 +146,18 @@ De forma complementaria, también realicé pruebas exhaustivas en las funcionali
 - Participar en **2 proyectos nuevos** aplicando prácticas ágiles mejoradas.  
 
 ### Socio de responsabilidad  
-- **Compañero asignado:** [Nombre del revisor] (para dar seguimiento trimestral).  
+- **Compañero asignado:** [Luis Fernando Villca Mamani] (para dar seguimiento trimestral).  
 
 ### Fecha de revisión  
-- **Dentro de 3 meses:** Evaluar avances y definir siguientes pasos.  
+- **Dentro de 3 meses:** Evaluar avances y definir siguientes pasos.
+
+## Contacto
+
+**👤 Nombre:** Shamir Erick Condori Troche  
+**👨‍💻 GitHub:** [SamStorm2003](https://github.com/SamStorm2003)  
+
+---
+
+### **Stark Storm**  
+*"La verdadera fuerza de un equipo no está en el código que escribe, sino en la confianza que construye."*  
+
