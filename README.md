@@ -10,21 +10,124 @@ De forma complementaria, también realicé pruebas exhaustivas en las funcionali
 ## Contribuciones Técnicas  
 
 ### Tecnologías utilizadas  
-- **Frontend:** Kotlin, Android (API 24–34). 
-- **Backend & Cloud:** Firebase (Auth, Firestore, Storage).  
-- **Arquitectura:** MVC + Repository Pattern.  
-- **Herramientas:** Android Studio, Git/GitHub, Jira, Miro.  
+## 🔧 Tecnologías utilizadas
+
+### Frontend Móvil
+- **Kotlin + Android Studio**  
+- **Material Design 3 + Jetpack Compose**  
+- **Coroutines**  
+
+### Frontend Web
+- **Next.js 14 + React 18**  
+- **TypeScript + Tailwind CSS**  
+
+### Backend & Database
+- **Firebase Authentication (Email/Password + Google OAuth)**  
+- **Cloud Firestore**  
+- **Firebase Storage**  
+- **Room Database (offline)**  
+
+### Tools
+- **Git + GitHub**  
+- **Gradle Build System**  
+- **APK Signing**  
+- **Android Studio, Git/GitHub, Jira, Miro.**
 
 ### Contribuciones clave del código  
-- Implementación de la **US-013 / US-012 (Calificar empleador/postulante)** → [Commit Link 1].  
-- Desarrollo de la **US-004 (Registro de usuarios y validaciones)** → [Commit Link 2].  
-- Ajustes en integración con Firebase Auth y Firestore para manejo de perfiles → [Commit Link 3].  
+- Implementación de la **US-013 / US-012 (Calificar empleador/postulante)** → [https://github.com/Jhoel777ar/cancheito_app_preview/commit/0843eb9d65cc62a380d146ce5d393398ae04254c].  
+- Desarrollo de la **US-004 (Registro de usuarios y validaciones)** → [https://github.com/Jhoel777ar/cancheito_app_preview/commit/fc112f8a4142a192668605cb29dc5ff90f22f4fb].  
+- Ajustes en integración con Firebase Auth y Firestore para manejo de perfiles → [https://github.com/Jhoel777ar/cancheito_app_preview/commit/b6a56136515280cc3e9197cc3521634735a76250].  
 
 ### Desafíos técnicos resueltos  
-- **Problema:** Inconsistencias en sincronización de datos entre nodos de Firestore y la UI dentro del perfil del empleador.  
-  **Solución:** Implementación de `LiveData` y `coroutines` para manejo de asincronía.  
-  **Aprendizaje:** La importancia de separar capas con MVVM para mejorar mantenibilidad.  
 
-- **Problema:** Fallos en la puesta de calificacion luego de postular.
-  **Solución:** Configuración correcta dentro de los fragments del empleador ya que ahi se guardaran las resenas.  
-  **Aprendizaje:** Profundización dentro de todos los archivos que tengan que ver con el usuario empleador
+### Desafío 1: Sincronización Offline–Online
+- **Problema:** Riesgo de pérdida de datos al usar la aplicación sin conexión.  
+- **Solución:** Implementación de una **cola de operaciones** en **Room Database** con sincronización en segundo plano mediante **WorkManager**, garantizando la persistencia y posterior actualización en la nube.  
+- **Aprendizaje:** Adopción de una **arquitectura offline-first**, comprensión profunda del manejo de estados de sincronización y resiliencia en entornos con conectividad limitada.  
+
+### Desafío 2: Autenticación con Google
+- **Problema:** Errores en la configuración de **SHA-1** y credenciales OAuth que impedían el inicio de sesión.  
+- **Solución:** Generación y registro correctos de certificados, junto con la configuración adecuada del archivo **google-services.json** en Firebase Console.  
+- **Aprendizaje:** Dominio del flujo de **OAuth 2.0**, mejores prácticas en la **gestión segura de credenciales** y fortalecimiento de la experiencia en integraciones con Firebase.  
+
+### Desafío 3: Actualización en Tiempo Real del Panel Admin
+- **Problema:** Los cambios en las colecciones no se reflejaban de forma inmediata en la vista del administrador.  
+- **Solución:** Uso de **Firestore onSnapshot listeners** combinados con **React Context** para propagar los cambios en tiempo real a todos los componentes del panel.  
+- **Aprendizaje:** Profundización en **state management avanzado** y en patrones de aplicaciones **colaborativas en tiempo real**, mejorando la fluidez de la experiencia de usuario.
+
+### Servicios creados  
+- `auth.service.ts`: Servicio para login, registro y persistencia de sesión.  
+- `grades.service.ts`: Servicio para gestión y validación de calificaciones en perfiles.  
+
+### Integraciones  
+- **Firebase:** Autenticación con email y Google, Firestore para persistencia y Storage para CVs/fotos.  
+- **APIs externas:** Integración con servicios de calendario/clima en pruebas exploratorias.  
+- **Pruebas físicas:** Validación en dispositivos Android gama media, garantizando fluidez y usabilidad.  
+
+---
+
+## Aplicación de la Metodología Ágil  
+
+- **Roles ejercidos:** Scrum Master, Desarrollador, Tester.  
+- **Participación en ceremonias:** Facilitación de *Daily Scrums*, *Sprint Planning*, *Reviews* y *Retrospectives*.  
+- **Métricas personales de contribución:**  
+  - Participación en ~70 % de sprints activos.  
+  - Desarrollo de 3 historias críticas del backlog.  
+  - Pruebas funcionales en +10 features de compañeros.  
+
+---
+
+## Desarrollo de Habilidades Blandas  
+
+- **Comunicación:** Coordinación efectiva entre desarrolladores, resolución de dudas en reuniones y chat de equipo.  
+- **Liderazgo:** Como Scrum Master, organicé los sprint plannings y mantuve la motivación del equipo.  
+- **Resolución de problemas:** Intervine en bugs críticos de Firebase y en flujos de autenticación.  
+- **Adaptabilidad:** Roté entre funciones de desarrollador, tester y líder ágil según lo requirió el sprint.  
+
+---
+
+## Artefactos y Evidencia  
+
+- **Screenshots:** Interfaces de login, perfil y calificaciones implementadas.  
+- **Documentación:** Historias de usuario, backlog priorizado, actas de sprint y definición de done.  
+- **Reconocimientos:** Agradecimientos del equipo por el soporte en pruebas y liderazgo.  
+- **Capturas de app:** Emulador y dispositivos físicos (API 24–34).  
+- **Fragmentos de código:** Configuración Firebase, `login.page.ts`, sincronización offline con Firestore.  
+
+---
+
+## Reflexión y Crecimiento Futuro  
+
+- **Autoreflexión:** El proyecto me permitió afianzar mi dominio en Kotlin, Firebase y metodologías ágiles. Destaco el valor de liderar como Scrum Master mientras sigo siendo un desarrollador activo.  
+- **Plan de crecimiento:** Mejorar mis habilidades en notificaciones push, almacenamiento local con SQLite y optimización de rendimiento.  
+- **Impacto profesional:** Este proyecto fortaleció mi visión de combinar desarrollo técnico con liderazgo ágil, lo que será clave en futuros desafíos laborales.  
+
+---
+
+## Declaración de Compromiso de Aprendizaje (Día 20)  
+
+### Habilidades técnicas (próximos 6 meses)  
+1. Dominar el uso de **Capacitor plugins** para funcionalidades nativas.  
+2. Implementar **SQLite/IndexedDB** para persistencia local en proyectos híbridos.  
+3. Integrar **servicios RESTful externos** de forma robusta y escalable.  
+
+### Prácticas ágiles  
+1. Aplicar *Definition of Done* clara en cada entregable.  
+2. Medir y mejorar *velocity* en futuros equipos.  
+3. Implementar *retrospectivas* accionables con planes de mejora continua.  
+
+### Colaboración  
+1. Mejorar feedback constructivo en code reviews.  
+2. Potenciar liderazgo compartido en ceremonias Scrum.  
+3. Desarrollar empatía para fomentar un clima de equipo colaborativo.  
+
+### Métricas de éxito  
+- Alcanzar **85 %+ de cobertura en tests**.  
+- Reducir bugs críticos en un **30 %** en siguientes proyectos.  
+- Participar en **2 proyectos nuevos** aplicando prácticas ágiles mejoradas.  
+
+### Socio de responsabilidad  
+- **Compañero asignado:** [Nombre del revisor] (para dar seguimiento trimestral).  
+
+### Fecha de revisión  
+- **Dentro de 3 meses:** Evaluar avances y definir siguientes pasos.  
